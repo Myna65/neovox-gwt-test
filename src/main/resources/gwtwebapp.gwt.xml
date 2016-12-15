@@ -1,0 +1,10 @@
+<module rename-to="gwtwebapp">
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name="com.google.gwt.json.JSON"/>
+
+    <entry-point class="client.GwtWebApp"/>
+
+    <source path="client"/>
+    <source path="common"/>
+</module>

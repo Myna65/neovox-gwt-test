@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:c="urn:import:client.ui.component">
+    <ui:with field="messages" type="client.resources.Messages"/>
+    <ui:with field="res" type="client.resources.ApplicationResources"/>
+
+    <g:FlowPanel styleName="{res.style.todoBlock}">
+        <g:InlineLabel styleName="{res.style.todoText}" text="Todo test" ui:field="textBox"/>
+        <c:ImageButton resource="{res.deleteIcon}" styleName="{res.style.sendButton}" text="{messages.deleteButton}"
+                       ui:field="deleteButton"/>
+    </g:FlowPanel>
+</ui:UiBinder>
