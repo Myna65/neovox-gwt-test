@@ -2,8 +2,8 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
              xmlns:g="urn:import:com.google.gwt.user.client.ui"
              xmlns:c="urn:import:client.ui.component">
-    <ui:with field="messages" type="client.resources.Messages"/>
-    <ui:with field="res" type="client.resources.ApplicationResources"/>
+    <ui:with field="messages" type="client.resource.Messages"/>
+    <ui:with field="res" type="client.resource.ApplicationResources"/>
 
     <g:DockLayoutPanel>
         <g:north size="250">

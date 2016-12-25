@@ -8,5 +8,7 @@ public class JsTodo extends JavaScriptObject {
 
     }
 
-    public native final String title();
+    public native final String title() /*-{
+        return this.title;
+    }-*/;
 }

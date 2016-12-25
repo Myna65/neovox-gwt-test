@@ -42,13 +42,24 @@ gwt {
     maxHeapSize = "1024M"
 }
 
-bootRun.dependsOn compileGwt
+task copyGwt(type: Copy) {
+    from 'build/gwt/out/'
+    into 'build/resources/main/static/'
+    include '**/*.js'
+    include '**/*.gif'
+}
+
+copyGwt.dependsOn compileGwt
+bootRun.dependsOn copyGwt
+
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: "${springBootVersion}"
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
     compile group: 'com.google.gwt', name: 'gwt-user', version: "${gwtVersion}"
-    compile group: 'com.google.gwt.inject', name: 'gin', version: "${ginVersion}"
+    compile (group: 'com.google.gwt.inject', name: 'gin', version: "${ginVersion}") {
+        exclude group: 'asm', module: 'asm'
+    }
     compile group: 'org.springframework', name: 'spring-core', version: "${springVersion}"
     compile group: 'org.springframework', name: 'spring-beans', version: "${springVersion}"
     compile group: 'org.springframework', name: 'spring-context', version: "${springVersion}"

@@ -1,7 +1,7 @@
 package client;
 
 import client.controller.WebAppController;
-import client.resources.ApplicationResources;
+import client.resource.ApplicationResources;
 import client.ui.MainPanel;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;

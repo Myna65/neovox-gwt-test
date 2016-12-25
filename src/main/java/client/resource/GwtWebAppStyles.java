@@ -1,4 +1,4 @@
-package client.resources;
+package client.resource;
 
 import com.google.gwt.resources.client.CssResource;
 
